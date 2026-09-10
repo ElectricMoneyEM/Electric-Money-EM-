@@ -126,6 +126,72 @@ Treasury accounting is deterministic and part of blockchain state replay.
 
 ---
 
+🔥 Fee & Burn Mechanism
+
+Electric Money V14 introduces a burn mechanism designed to permanently remove a small amount of EM from the circulating supply.
+
+Transaction Burn
+
+Every standard transaction includes a 0.05% burn.
+
+The burned amount is permanently removed from the circulating supply and cannot be recovered or redistributed.
+
+Receiver Levy
+
+Incoming balances are subject to a total 0.25% levy, divided as follows:
+
+- 0.20% → Treasury
+- 0.05% → Permanent burn
+
+The Treasury portion is used by the protocol's monthly Treasury distribution mechanism.
+
+Annual Wallet Balance Tax
+
+Wallet balances are subject to a 0.25% annual levy, also divided into:
+
+- 0.20% → Treasury
+- 0.05% → Permanent burn
+
+The annual levy is calculated from the wallet's current balance according to the protocol's yearly tax schedule.
+
+Why Burn EM?
+
+The burn mechanism introduces a permanent reduction in circulating supply as economic activity occurs.
+
+Unlike Treasury funds, burned EM is not redistributed to miners, users or other participants. Once burned, it is permanently removed from the protocol's circulating supply.
+
+The goal is to explore whether a combination of Proof-of-Work issuance, Treasury incentives and controlled supply reduction can create a different long-term economic model.
+
+---
+
+📜 Protocol Parameters
+
+Parameter| Current value
+Currency| Electric Money (EM)
+Consensus| Proof of Work
+Target block time| 600 seconds
+Initial block reward| 25 EM
+Halving interval| 1,445,400 blocks
+Halving period| ~27.5 years
+Maximum cumulative issuance| 72,270,024.841006 EM
+Receiver levy| 0.25%
+└ Treasury portion| 0.20%
+└ Burn portion| 0.05%
+Annual wallet balance levy| 0.25%
+└ Treasury portion| 0.20%
+└ Burn portion| 0.05%
+Standard transaction burn| 0.05%
+Treasury distribution| Monthly
+Difficulty adjustment| Every 10 blocks
+Maximum transactions/block| 5,000
+Maximum block size| 2 MiB
+Maximum peers| 64
+Protocol version| 14
+
+«Note: The maximum cumulative issuance is the protocol's exact calculated issuance cap for the current 27.5-year halving schedule. Burned EM is tracked separately and reduces circulating supply.»
+
+---
+
 ⛏️ Proof of Work
 
 Electric Money uses Proof of Work as its consensus mechanism.
